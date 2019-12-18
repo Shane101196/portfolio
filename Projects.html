@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>Projects</title>
+    <link rel="stylesheet" type="text/css" href="p1b.css">
+    <script type="text/javascript" src="script.js"></script>
+    	<div id="header">
+		<center><h1 id= "name"> Shane Cox Portfolio</h1></center>	
+		<a href="Index.html" class="button">About</a>
+		<a href="ShaneCoxResume.pdf" class="button">Resume</a>
+		<a href="Projects.html" class="disabled">Projects</a>
+	</div>
+</head>
+<body background="prism.png">
+	<ul id ="project">
+		<p id ="intro">Click a project name to learn more about it. </p>
+	    	<li class ="list">
+		<p onclick="openProject('gpu')">GPU Algorithm Optimization <span style="color:red">-NVIDIA CUDA</span></p>
+	</li>
+	<li class ="list">
+		<p onclick="openProject('rando')"> Game Randomizer <span style="color:red">-Java w/ GUI</span></p>
+	</li>
+	<li class ="list">
+		<p onclick="openProject('cars')"> Online Car Catalog w/ Web scraper <span style="color:red">-AngularJS/NodeJS/MongoDB</span></p>
+	</li>
+	<li class ="list">
+		<p onclick="openProject('scheduler')">CPU scheduler and File Management System <span style="color:red">-C</span></p>
+	</li>
+	</ul>
+	<div id = "return" style="display: none;"><button type="button" class="myButton" onclick="returnButton()">Return to projects</button></div>
+		<div id = "gpu" style="display: none;">
+			<hr>
+			<ul class ="description">
+			 	<li class ="list">
+				<p>This was my Senior Design Project, where I worked with NASA GRC and collegues to improve the <a href="https://en.wikipedia.org/wiki/Gr%C3%B6bner_basis">Gröbner basis</a> algorithm using GPU Parallelization</p>
+			</li>
+			<li class ="list">
+				<p>I achieved roughly a 40x increase on one critical method of the algorithm, and an 8x increase on another large method.</p>
+			</li>
+			<li class ="list">
+				<p>I used NVIDIA CUDA via the Numba library to create GPU-capabilities in a pre-existing source inside the SymPy library.</p>
+			</li>
+			<li class ="list">
+				<p>I profiled the code, created benchmarks via an automated testing script, and graphed the results using tableau.</p>
+			</li>
+			</ul>
+			<div class="row">
+				<div class="imageContainer">
+					<img src="graph2.png" alt="The GUI" width="600" height="400"></img>
+					<div class="bottom-left">Some of the data visualizations.</div>
+				</div>
+					<div class="imageContainer">
+					<img src="graph1.png" alt="Gameplay footage" width="600" height="400"></img>
+				</div>
+			</div>
+			<hr>
+			<div><button type="button" class="myButton" onclick="returnButton()">Return to projects</button></div>
+		</div>
+		<div id = "rando" style="display: none;">
+			<hr>
+			<ul class ="description">
+			    <li class ="list">
+				<p>This is a game randomizer created in Java with a GUI.</p>
+			</li>
+			<li class ="list">
+				<p>It reads the entire ROM data of the game, and modifies data based on options selected by user.</p>
+			</li>
+			<li class ="list">
+				<p>It recreates the entire collision map, and places objects inside the boundaries of the map.</p>
+			</li>
+			<li class ="list">
+				<p>The software uses a randomized user-generated seed, which can be shared with others to create the same effects.</p>
+			</li>
+			</ul>
+			<div class="row">
+				<div class="imageContainer">
+					<img src="gui.png" alt="The GUI" width="250" height="400"></img>
+					<div class="bottom-left">The GUI</div>
+				</div>
+					<div class="imageContainer">
+					<img src="mario.png" alt="Gameplay footage" width="800" height="400"></img>
+					<div class="bottom-left">Gameplay</div>
+				</div>
+			</div>
+			<hr>
+			<div><button type="button" class="myButton" onclick="returnButton()">Return to projects</button></div>
+		</div>
+		<div id = "cars" style="display: none;">
+				<hr>
+			<ul class ="description">
+			    <li class ="list">
+				<p>I used Python with BeautifulSoup and PyMongo libraries to create a web scraper.</p>
+			</li>
+			<li class ="list">
+				<p>I scraped and parsed all the data I wanted, and stored it in a local MongoDB document.</p>
+			</li>
+			<li class ="list">
+				<p>Using NodeJS I worked with a REST api to create model schema for handling the data to and from the DB.</p>
+			</li>
+			<li class ="list">
+				<p>Mongoose and Express were used to create the queries from the server to the DB (CRUD).</p>
+			</li>
+			<li class ="list">
+				<p>AngularJS was used for the front-end, using 2 controllers to show the data.</p>
+			</li>
+			</ul>
+			<div class="row">
+				<div class="imageContainer">
+					<img src="stack.png" alt="The stack" width="500" height="500"></img>
+					<div class="bottom-left">The Stack</div>
+				</div>
+					<div class="imageContainer">
+					<img src="format.png" alt="The data" width="500" height="500"></img>
+					<div class="bottom-left">The data format</div>
+				</div>
+			</div>
+				<hr>
+					<div><button type="button" class="myButton" onclick="returnButton()">Return to projects</button></div>
+		</div>
+		<div id = "scheduler" style="display: none;">
+			<hr>
+			<ul class ="description">
+			    <li class ="list">
+				<p>I created a CPU scheduler and also recreated a file management system in C.</p>
+			</li>
+			<li class ="list">
+				<p>The scheduler would read a text file with process information to a Struct I created.</p>
+			</li>
+			<li class ="list">
+				<p>This struct would point to the next process, allowing the system to work on each process for a pre-determined amount of time before looping back to the first process.</p>
+			</li>
+			<li class ="list">
+				<p>It would complete all processes and tell the time it took to complete.</p>
+			</li>
+			<li class ="list">
+				<p>I essentially created an implementation of the 'ls' linux command in C for the file management system.</p>
+			</li>
+			<li class ="list">
+				<p>I also created an implementation of the 'cp' linux command in C for the file management system.</p>
+			</li>
+			</ul>
+			<div class="row">
+				<div class="imageContainer">
+					<img src="cpu.png" alt="The stack" width="500" height="200"></img>
+					<div class="bottom-left">CPU Scheduler</div>
+				</div>
+					<div class="imageContainer">
+					<img src="file.png" alt="The data" width="500" height="200"></img>
+					<div class="bottom-left">File Management System</div>
+				</div>
+			</div>
+			<hr>
+			<div><button type="button" class="myButton" onclick="returnButton()">Return to projects</button></div>
+		</div>
+	</body>

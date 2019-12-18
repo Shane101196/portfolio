@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>Test</title>
+
+  <link rel="stylesheet" type="text/css" href="p1b.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+	<style>
+		#mh {
+			display: none;
+		}
+		#tb {
+			display: none;
+		}
+	</style>
+<script type="text/javascript" src="config.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<button onclick="getUserData()">Get</button>
+<select id ="region">
+  <option value="na1">North America</option>
+  <option value="la1">LAN</option>
+  <option value="la2">LAS</option>
+  <option value="eun1">EUNE</option>
+  <option value="euw1">EUW</option>
+  <option value="kr">Korea</option>
+  <option value="ru">Russia</option>
+  <option value="br1">Brazil</option>
+  <option value="oc1">Oceania</option>
+  <option value="jp1">Japan</option>
+  <option value="tr1">Turkey</option>
+</select>
+<input type="text" name="Summoner Name" id="summonerName"><br>
+<p id = "profileIconId"></p>
+<img id = "profIcon"></img>
+<p id = "name"></p>
+<p id = "summonerLevel"></p>
+<p id = "revisionDate"></p>
+<p id = "accountId"></p>
+<p id = "puuid"></p>
+<p id = "id1"></p>
+<button id = "mh" onclick="getMatchHistory()">Match History</button>
+<table id = "tb" cellpadding = "10" border = "1"> 
+<thead>
+	<tr>
+		<th>Region</th>
+		<th>Game ID</th>
+		<th>Champion ID</th>
+		<th>Queue ID</th>
+		<th>Season</th>
+		<th>Date Played</th>
+		<th>Lane</th>
+		<th>Role</th>
+	</tr>
+</thead>
+</table>
+</body>
+</html>
